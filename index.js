@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-const rs = fs.createReadStream('./base64.txt');
+const rs = fs.createReadStream('images/base64.txt');
 const rl = readline.createInterface({
   //読み込みたいストリームの設定
     input: rs,
@@ -12,7 +12,7 @@ const rl = readline.createInterface({
     //wsに一行ずつ書き込む
     console.log(lineString[0]);
     const base64Str = lineString.replace("data:image/jpeg;base64,","");
-    console.log(lineno)
+    fs.promises.writeFile(`images/${lineno}.jpg`, base64Str, { encoding: "base64" });
   });
 // fs.readFile("base64.txt", )
 // const inputBase64 = argv[1];
