@@ -8,11 +8,6 @@ const rl = readline.createInterface({
   input: rs,
 });
 
-const bfunc = () => "hello"
-const afunc = (() => bfunc)()
-
-
-
 const line_counter = ((i = 0) => {
   return () => {
     return ++i;
