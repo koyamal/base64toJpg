@@ -1,3 +1,4 @@
+const { create } = require('domain');
 const fs = require('fs');
 const readline = require('readline');
 
@@ -21,11 +22,13 @@ const createJpg = async () => {
       return ++i;
     }
   })();
-}
 
-rl.on('line', (lineString, lineno = line_counter()) => {
-  const base64Str = lineString.replace("data:image/jpeg;base64,","");
-  fs.promises.writeFile(`images/${headText}/${headText}_${lineno}.jpg`, base64Str, { encoding: "base64" });
-});
+  rl.on('line', (lineString, lineno = line_counter()) => {
+    const base64Str = lineString.replace("data:image/jpeg;base64,","");
+    fs.promises.writeFile(`images/${headText}/${headText}_${lineno}.jpg`, base64Str, { encoding: "base64" });
+  });
 
-console.log("終了");
+  console.log("終了");
+};
+
+createJpg();
