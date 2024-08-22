@@ -3,6 +3,13 @@ const readline = require('readline');
 
 const headText = process.argv[2];
 
+fs.mkdir(`images/${headText}`, (err) => {
+  if(err) {
+    console.log(error);
+    return;
+  }
+})
+
 const rs = fs.createReadStream(`images/${headText}.txt`);
 const rl = readline.createInterface({
   input: rs,
