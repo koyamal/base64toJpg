@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('node:fs/promises');
 const readline = require('readline');
 
 const headText = process.argv[2];
