@@ -10,33 +10,23 @@ const createJpg = async () => {
 
   const stream = fd.createReadStream();
 
-  // const rs = fs.createReadStream(`images/${headText}.txt`);
+  const rl = readline.createInterface({
+    input: stream,
+  });
 
-    const rl = readline.createInterface({
-      input: stream,
-    });
+  const line_counter = ((i = 0) => {
+    return () => {
+      return ++i;
+    }
+  })();
 
-    const line_counter = ((i = 0) => {
-      return () => {
-        return ++i;
-      }
-    })();
+  rl.on('line', async (lineString, lineno = line_counter()) => {
+    const base64Str = lineString.replace("data:image/jpeg;base64,","");
+    await fs.writeFile(`images/${headText}/${headText}_${lineno}.jpg`, base64Str, { encoding: "base64" });
+  });
 
-    rl.on('line', async (lineString, lineno = line_counter()) => {
-      const base64Str = lineString.replace("data:image/jpeg;base64,","");
-      await fs.writeFile(`images/${headText}/${headText}_${lineno}.jpg`, base64Str, { encoding: "base64" });
-    });
+  console.log("終了");
 
-    console.log("終了");
-
-  // fs.mkdir(`images/${headText}`, (err) => {
-  //   if(err) {
-  //     console.log(err);
-  //     return;
-  //   }
-// 
-    // 
-  // });
 };
 
 createJpg();
