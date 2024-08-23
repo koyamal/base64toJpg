@@ -4,6 +4,8 @@ const readline = require('readline');
 const headText = process.argv[2];
 
 const createJpg = async () => {
+  await fs.mkdir(`images/${headText}`);
+
   fs.mkdir(`images/${headText}`, (err) => {
     if(err) {
       console.log(err);
