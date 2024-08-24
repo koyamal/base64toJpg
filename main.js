@@ -26,7 +26,6 @@ const createJpg = async () => {
   });
 
   console.log("終了");
-
 };
 
 createJpg();
