@@ -33,5 +33,6 @@ const createJpg = async () => {
 
 if(!headText) {
   console.log("エラー: README.mdをご確認し、再度実行してください。");
+  return;
 }
 createJpg();
