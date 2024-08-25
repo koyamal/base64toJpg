@@ -27,7 +27,7 @@ const createJpg = async () => {
       fs.promises.writeFile(`images/${headText}/${headText}_${lineno}.jpg`, base64Str, { encoding: "base64" });
     });
 
-    console.log("終了しました。");
+    console.log("完了しました。");
   });
 };
 
