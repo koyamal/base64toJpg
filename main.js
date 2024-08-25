@@ -28,4 +28,9 @@ const createJpg = async () => {
   console.log("終了");
 };
 
+if (!headText) {
+  console.log("コマンドライン引数を与えてください。詳しくはREADME.mdをご確認ください。");
+  return;
+}
+
 createJpg();
