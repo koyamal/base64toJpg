@@ -1,3 +1,3 @@
 const a = 'helloWorld';
 
-const b = 'goodbyeCities';
+const b = 'goodbyeCity';
