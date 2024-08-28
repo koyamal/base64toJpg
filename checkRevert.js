@@ -14,3 +14,7 @@ console.log(arr3);
 const arr4 = arr1.concat(arr2);
 
 console.log(arr4);
+
+arr4.forEach(data => {
+  console.log(data);
+})
