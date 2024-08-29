@@ -32,5 +32,7 @@ const backText = originText.split('/').splice(-3, 3).join('/');
 console.log(backText);
 
 let array = ['1番目', '2番目', '3番目', '4番目', '5番目'];
+// array.splice(1,3) はarrayから2番目から3つ(4番目)までを取得し返却する。
+// arrayは2番目から4番目を除いた値となる。
 console.log(array.splice(1,3));
 console.log(array);
