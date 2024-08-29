@@ -24,3 +24,7 @@ const urlText = 'https://aaa.example.com/services_files/summary/1231212-12312312
 const atest = urlText.split('/').splice(-3, 3).join('/');
 
 console.log(atest);
+
+const originText = '1/2/3/4/5/6/7/8/9/10';
+const frontText = originText.split('/').splice(0, 3).join('/');
+console.log(frontText);
