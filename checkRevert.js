@@ -26,6 +26,7 @@ const atest = urlText.split('/').splice(-3, 3).join('/');
 console.log(atest);
 
 const originText = '1/2/3/4/5/6/7/8/9/10';
+// 前から3つ
 const frontText = originText.split('/').splice(1, 3).join('/');
 console.log(frontText);
 // 後ろから3つ
