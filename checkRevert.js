@@ -18,3 +18,9 @@ console.log(arr4);
 arr4.forEach(data => {
   console.log(data);
 })
+
+
+const urlText = 'https://aaa.example.com/services_files/summary/1231212-12312312-32423423/dfgkajfasasd_1_123534344334_summary.'
+const atest = urlText.split('/').splice(-3, 3).join('/');
+
+console.log(atest);
