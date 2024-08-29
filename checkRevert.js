@@ -38,3 +38,6 @@ let array = ['1番目', '2番目', '3番目', '4番目', '5番目'];
 // arrayは2番目から4番目を除いた値となる。
 console.log(array.splice(1,3));
 console.log(array);
+
+const arrayA = ['a', 'b', 'c', 'd'];
+console.log(arrayA.join('.'));
