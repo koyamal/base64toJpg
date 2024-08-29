@@ -31,3 +31,7 @@ console.log(frontText);
 console.log(originText.split('/').splice(1, 3))
 const backText = originText.split('/').splice(-3, 3).join('/');
 console.log(backText);
+
+let array = ['1番目', '2番目', '3番目', '4番目', '5番目'];
+console.log(array.splice(1,3));
+console.log(array);
