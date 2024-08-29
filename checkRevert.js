@@ -26,5 +26,8 @@ const atest = urlText.split('/').splice(-3, 3).join('/');
 console.log(atest);
 
 const originText = '1/2/3/4/5/6/7/8/9/10';
-const frontText = originText.split('/').splice(0, 3).join('/');
+const frontText = originText.split('/').splice(1, 3).join('/');
 console.log(frontText);
+console.log(originText.split('/').splice(1, 3))
+const backText = originText.split('/').splice(-3, 3).join('/');
+console.log(backText);
