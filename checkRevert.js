@@ -40,4 +40,4 @@ console.log(array.splice(1,3));
 console.log(array);
 
 const arrayA = ['a', 'b', 'c', 'd'];
-console.log(arrayA.join('.'));
+console.log(arrayA.join(','));
