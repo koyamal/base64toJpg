@@ -3,6 +3,11 @@ const readline = require('readline');
 
 const headText = process.argv[2];
 
+if (!headText) {
+  console.log("コマンドライン引数を与えてください。詳しくはREADME.mdをご確認ください。");
+  return;
+}
+
 const createJpg = async () => {
   await fs.mkdir(`images/${headText}`);
 
@@ -27,10 +32,5 @@ const createJpg = async () => {
   
   console.log("完了しました。");
 };
-
-if (!headText) {
-  console.log("コマンドライン引数を与えてください。詳しくはREADME.mdをご確認ください。");
-  return;
-}
 
 createJpg();
