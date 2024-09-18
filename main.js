@@ -9,6 +9,7 @@ if (!headText) {
   return;
 }
 
+// Jpgファイルを作成する関数
 const createJpg = async () => {
   await fs.mkdir(`images/${headText}`);
 
