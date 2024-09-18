@@ -3,6 +3,7 @@ const readline = require('readline');
 
 const headText = process.argv[2];
 
+// 引数がない場合は終了する。
 if (!headText) {
   console.log("コマンドライン引数を与えてください。詳しくはREADME.mdをご確認ください。");
   return;
