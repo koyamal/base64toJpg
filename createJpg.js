@@ -3,6 +3,11 @@ const readline = require('readline');
 
 const headText = process.argv[2];
 
+if(!headText) {
+  console.log("エラー: README.mdをご確認し、再度実行してください。");
+  return;
+}
+
 const createJpg = async () => {
   fs.mkdir(`images/${headText}`, (err) => {
     if(err) {
@@ -31,8 +36,4 @@ const createJpg = async () => {
   });
 };
 
-if(!headText) {
-  console.log("エラー: README.mdをご確認し、再度実行してください。");
-  return;
-}
 createJpg();
