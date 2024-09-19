@@ -4,7 +4,7 @@ const readline = require('readline');
 const headText = process.argv[2];
 
 if(!headText) {
-  console.log("エラー: README.mdをご確認し、再度実行してください。");
+  console.log("入力エラー: README.mdをご確認し、再度実行してください。");
   return;
 }
 
