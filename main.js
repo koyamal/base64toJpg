@@ -3,6 +3,13 @@ const readline = require('readline');
 
 const headText = process.argv[2];
 
+// 引数がない場合は終了する。
+if (!headText) {
+  console.log("コマンドライン引数を与えてください。詳しくはREADME.mdをご確認ください。");
+  return;
+}
+
+// Jpgファイルを作成する関数
 const createJpg = async () => {
   await fs.mkdir(`images/${headText}`);
 
@@ -24,13 +31,8 @@ const createJpg = async () => {
     const base64Str = lineString.replace("data:image/jpeg;base64,","");
     await fs.writeFile(`images/${headText}/${headText}_${lineno}.jpg`, base64Str, { encoding: "base64" });
   });
-
-  console.log("完了");
+  
+  console.log("完了しました。");
 };
-
-if (!headText) {
-  console.log("コマンドライン引数を与えてください。詳しくはREADME.mdをご確認ください。");
-  return;
-}
 
 createJpg();
