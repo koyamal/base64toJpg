@@ -21,9 +21,7 @@ const createJpg = async () => {
       input: rs,
     });
 
-    const line_counter = ((i = 0) => {
-      return () => ++i;
-    })();
+    const line_counter = ((i = 0) => () => ++i)();
 
     rl.on('line', (lineString, lineno = line_counter()) => {
       const base64Str = lineString.replace("data:image/jpeg;base64,","");
