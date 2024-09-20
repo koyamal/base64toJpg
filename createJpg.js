@@ -22,9 +22,7 @@ const createJpg = async () => {
     });
 
     const line_counter = ((i = 0) => {
-      return () => {
-        return ++i;
-      }
+      return () => ++i;
     })();
 
     rl.on('line', (lineString, lineno = line_counter()) => {
